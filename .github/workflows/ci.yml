@@ -28,7 +28,7 @@ jobs:
       - name: Run Smoke + API tests
         env:
           HEADLESS: "true"
-          BASE_URL: "https://the-internet.herokuapp.com"
+          ENV: "dev"
           API_BASE_URL: "https://httpbin.org"
         run: |
           pytest -m "smoke or api" -n 2 -q
